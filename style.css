@@ -1,0 +1,22 @@
+body, html
+{
+    background-color: #ccc;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table
+{
+
+}
+
+td,th
+{
+    padding: 10px;
+    font-size: 40px;
+    text-align: center;
+}
