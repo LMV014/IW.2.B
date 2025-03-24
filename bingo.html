@@ -59,14 +59,53 @@
     </tbody>
 </table>
 
-    <script>
 
-        Cartela.B = [];
-        Cartela.I = [];
-        Cartela.N = [];
-        Cartela.G = [];
-        Cartela.O = []; 
+   
+    <!-- JavaScript -->
 
+    <script type="text/javascript">
+        var cartelaB = []; //1 a 15
+        var cartelaI = []; //16 a 30
+        var cartelaN = []; //31 a 45
+        var cartelaG = []; //46 a 60
+        var cartelaO = []; //61 a 75
+        
+        function GerarArray(numInicial, quantidade) {
+            var retorno = []
+            for (var i = 0; i < quantidade; i++) 
+            {
+                retorno.push(numInicial)
+                numInicial++;
+            }
+            return retorno
+        }
+        //B
+        cartelaB = GerarArray(1,15);
+        console.log("Arrey da coluna B");
+        console.log(cartelaB);
+        //I
+        cartelaI = GerarArray(16,15);
+        console.log("Arrey da coluna I");
+        console.log(cartelaI);
+        //N
+        cartelaN = GerarArray(31,15);
+        console.log("Arrey da coluna N");
+        console.log(cartelaN);
+        //G
+        cartelaG = GerarArray(46,15);
+        console.log("Arrey da coluna G");
+        console.log(cartelaG);
+        //O
+        cartelaO = GerarArray(61,15);
+        console.log("Arrey da coluna O");
+        console.log(cartelaO);
+
+        /*
+        Exercício para nota:
+        Faça cinco Arrey, um para cada letra do BINGO e dentro deles coloque
+        cinco números referentes a sua letra sem repetir nenhum número.
+        Tudo dinâmico
+        */
     </script>
 
 </body>
