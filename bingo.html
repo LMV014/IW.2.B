@@ -22,8 +22,8 @@
     <!-- corpo da tabela -->
     <tbody>
     <tr>
-        <td id="b1" onclick="MarcarSorteado()" >1</td>
-        <td id="i1">22</td>
+        <td id="b1" onclick="MarcarSorteado('b1',this)" >1</td>
+        <td id="i1" >22</td>
         <td id="n1">33</td>
         <td id="g1">51</td>
         <td id="o1">75</td>
@@ -106,12 +106,21 @@
         console.log(b2);
         console.log(b2);
 
-        function MarcarSorteado()
+        function MarcarSorteado(nomeId, elemento)
         {
-            b1.style.backgroundColor= '#000';
+            /*console.log(elemento)
+            console.log(nomeId)*/
+            elemento.style.backgroundColor= "#90ee90"
+            alert(elemento.style.backgroundColor)
         }
-        
-        
+        if(elemento.style.backgroundColor == "#90ee90")
+        {
+            alert("A cor é lima")
+        }
+        else
+        {
+            
+        }
         /*
         Exercício para nota:
         Faça cinco Arrey, um para cada letra do BINGO e dentro deles coloque
