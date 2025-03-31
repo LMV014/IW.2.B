@@ -23,8 +23,8 @@
     <tbody>
     <tr>
         <td id="b1" onclick="MarcarSorteado('b1',this)" >1</td>
-        <td id="i1" >22</td>
-        <td id="n1">33</td>
+        <td id="i1" onclick="MarcarSorteado('i1',this)" >22</td>
+        <td id="n1" onclick="MarcarSorteado('n1',this)">33</td>
         <td id="g1">51</td>
         <td id="o1">75</td>
     </tr>
@@ -108,8 +108,6 @@
 
         function MarcarSorteado(nomeId, elemento)
         {
-            /*console.log(elemento)
-            console.log(nomeId)*/
             elemento.style.backgroundColor= "#90ee90"
             alert(elemento.style.backgroundColor)
         }
