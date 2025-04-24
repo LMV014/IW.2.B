@@ -83,23 +83,23 @@
             return retorno
         }
         //B
-        cartelaB = GerarArray(1,15);
+        cartelaB = MisturarArrey(GerarArray(1,15));
         console.log("Arrey da coluna B");
         console.log(cartelaB);
         //I
-        cartelaI = GerarArray(16,15);
+        cartelaI = MisturarArrey(GerarArray(16,15));
         console.log("Arrey da coluna I");
         console.log(cartelaI);
         //N
-        cartelaN = GerarArray(31,15);
+        cartelaN = MisturarArrey(GerarArray(31,15));
         console.log("Arrey da coluna N");
         console.log(cartelaN);
         //G
-        cartelaG = GerarArray(46,15);
+        cartelaG = MisturarArrey(GerarArray(46,15));
         console.log("Arrey da coluna G");
         console.log(cartelaG);
         //O
-        cartelaO = GerarArray(61,15);
+        cartelaO = MisturarArrey(GerarArray(61,15));
         console.log("Arrey da coluna O");
         console.log(cartelaO);
 
@@ -120,11 +120,35 @@
             }
         }
 
+        function NumeroAleatorio(numeroMinino, numeroMaximo)
+        {
+            var retorno = Math.floor(Math.random()* numeroMaximo)
+            if (retorno > 0 && retorno >= numeroMinino && retorno <= numeroMaximo) {
+                return retorno 
+            } else {
+                return NumeroAleatorio(numeroMinino, numeroMaximo)
+            }
+
+        }
+
+        function MisturarArrey(arrey)
+        {
+            var aleatorio
+            var cont = arrey.length
+            var auxiliar
+            while (cont != 0) {
+                aleatorio = NumeroAleatorio(1, arrey.length)
+                cont--
+                auxiliar = arrey[cont]
+                arrey[cont] = arrey[aleatorio]
+                arrey[aleatorio] = auxiliar
+            }
+            return arrey
+        }
+
+
         var b2 = document.getElementById('b2');
         var b1 = document.getElementById('b1');
-
-        console.log(b2);
-        console.log(b2);
 
         function MarcarSorteado(nomeId, elemento)
         {
