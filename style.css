@@ -4,7 +4,7 @@ body, html
     padding: 0;
     margin: 0;
     height: 100%;
-    display: flex;
+    display: flex;   
     justify-content: center;
     align-items: center;
 }
@@ -19,3 +19,13 @@ td,th
     border-radius: 5px;
 }
 
+button
+{
+    margin-top: 110%;
+    margin-left: -50%;
+    padding: 10px;
+    border-radius: 20px;
+    border-width: 1px;
+    box-shadow: none;
+    
+}
