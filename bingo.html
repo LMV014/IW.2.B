@@ -38,7 +38,7 @@
     <tr>
         <td  id="b3" onclick="MarcarSorteado('b3',this)">5</td>
         <td  id="i3" onclick="MarcarSorteado('i3',this)">27</td>
-        <td  id="n3" onclick="MarcarSorteado('n3',this)"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcqpVpMINbKWgXENlhQXm-HPSNyx66ZpcW6A&s" width="50" height="50"></td>
+        <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcqpVpMINbKWgXENlhQXm-HPSNyx66ZpcW6A&s" width="50" height="50"></td>
         <td  id="g3" onclick="MarcarSorteado('g3',this)">57</td>
         <td  id="o3" onclick="MarcarSorteado('o3',this)">71</td>
     </tr>
@@ -62,7 +62,6 @@
     <button onclick="gerar_cartela()">
         Gerar Cartela
     </button>
-
    
     <!-- JavaScript -->
 
@@ -82,29 +81,29 @@
             }
             return retorno
         }
-        //B
-        cartelaB = MisturarArrey(GerarArray(1,15));
-        console.log("Arrey da coluna B");
-        console.log(cartelaB);
-        //I
-        cartelaI = MisturarArrey(GerarArray(16,15));
-        console.log("Arrey da coluna I");
-        console.log(cartelaI);
-        //N
-        cartelaN = MisturarArrey(GerarArray(31,15));
-        console.log("Arrey da coluna N");
-        console.log(cartelaN);
-        //G
-        cartelaG = MisturarArrey(GerarArray(46,15));
-        console.log("Arrey da coluna G");
-        console.log(cartelaG);
-        //O
-        cartelaO = MisturarArrey(GerarArray(61,15));
-        console.log("Arrey da coluna O");
-        console.log(cartelaO);
-
+        
         function gerar_cartela()
         {
+            //B
+            cartelaB = MisturarArrey(GerarArray(1,15));
+            console.log("Arrey da coluna B");
+            console.log(cartelaB);
+            //I
+            cartelaI = MisturarArrey(GerarArray(16,15));
+            console.log("Arrey da coluna I");
+            console.log(cartelaI);
+            //N
+            cartelaN = MisturarArrey(GerarArray(31,15));
+            console.log("Arrey da coluna N");
+            console.log(cartelaN);
+            //G
+            cartelaG = MisturarArrey(GerarArray(46,15));
+            console.log("Arrey da coluna G");
+            console.log(cartelaG);
+            //O
+            cartelaO = MisturarArrey(GerarArray(61,15));
+            console.log("Arrey da coluna O");
+            console.log(cartelaO);
             for(var i = 1; i <=5; i++)
             {
                 var td = document.getElementById("b"+i)
@@ -155,28 +154,6 @@
             elemento.style.backgroundColor= "#90ee90"
             alert(elemento.style.backgroundColor)
         }
-        // if (elemento.style.backgroundColor == "#90ee90")
-        // {
-        //     elemento.style.backgroundColor = '#ffffff'
-        // }
-        /*
-        if(elemento.style.backgroundColor == "#90ee90")
-        {
-            alert("A cor é lima")
-        }
-        else
-        {
-            
-        }
-        /*
-        
-        /*
-        Exercício para nota:
-        Faça cinco Arrey, um para cada letra do BINGO e dentro deles coloque
-        cinco números referentes a sua letra sem repetir nenhum número.
-        Tudo dinâmico
-        */
-
 </script>
 
 </body>
