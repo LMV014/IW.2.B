@@ -32,9 +32,7 @@
         float: right;
         margin-left: 10px;
         border-width: 1px;
-        border-top: 0;
-        border-left: 0;
-        border-right: 0;
+        border-radius: 10px;
     }
 
     button {
@@ -77,40 +75,57 @@
 
     <script>
         function ValidarFormulario()
-        {
+        {   //cep
             var cep = document.getElementById('cep')
             if (cep.value == "") {
                 alert('Campo CEP deve ser preenchido')
+                cep.style.borderColor = 'red'
+                cep.style.borderWidth = '2px'
                 return false
             }
 
+            //endereço
             var endereco = document.getElementById ('endereco')
             if (endereco.value == "") {
                 alert('Campo Endereço deve ser preenchido')
+                cep.style.borderColor = 'red'
+                cep.style.borderWidth = '2px'
                 return false
             }
 
+            // número
             var numero = document.getElementById('numero')
             if (numero.value == "") {
                 alert('Campo número deve ser preenchido')
+                cep.style.borderColor = 'red'
+                cep.style.borderWidth = '2px'
                 return false
             }
 
+            // beirro
             var bairro = document.getElementById ('bairro')
             if (bairro.value == "") {
                 alert('Campo bairro deve ser preenchido')
+                cep.style.borderColor = 'red'
+                cep.style.borderWidth = '2px'
                 return false
             }
 
+            // cidade
             var cidade = document.getElementById('cidade')
             if (cidade.value == "") {
                 alert('Campo cidade deve ser preenchido')
+                cep.style.borderColor = 'red'
+                cep.style.borderWidth = '2px'
                 return false
             }
 
+            // estado
             var estado = document.getElementById ('estado')
             if (estado.value == "") {
                 alert('Campo estado deve ser preenchido')
+                cep.style.borderColor = 'red'
+                cep.style.borderWidth = '2px'
                 return false
             }
         }
