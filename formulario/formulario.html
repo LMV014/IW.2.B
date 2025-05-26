@@ -32,9 +32,8 @@
         float: right;
         margin-left: 10px;
         border-width: 1px;
-        border-top: 0;
-        border-left: 0;
-        border-right: 0;
+        border-radius: 15px;
+        box-shadow: none;
     }
 
     button {
@@ -50,10 +49,11 @@
 </style>
     <!-- HTML -->
 
-    <form action="salvar.html" method="post" onsubmit="return ValidarFormulario()" >
+    <form method="post" onsubmit="return ValidarFormulario()" >
         
-        <label>Cep</label>
+        <label id="msgCep">Cep</label>
         <input type="text" value="" name="cep" id="cep" class="campo" /><br><br>
+        <div id="mensagemCep"></div><br><br>
         
         <label>Endereço</label>
         <input type="text" name="endereco" id="endereco" class="campo" /> <br><br>
@@ -76,50 +76,93 @@
     </form>
 
     <script>
+
+        function mensagemErro ()
+        {
+            var mensagemCep = getElementById('mensagemCep')
+            if (cep.value == "") {
+                mensagem.textContent = 'O campo CEP deve ser preenchido';
+                } else {
+                    mensagem.textContent = '';
+            }
+        
+            if (endereco.value == "") {
+                mensagem.textContent = 'O campo endereço deve ser preenchido';
+                } else {
+                    mensagem.textContent = '';
+            }
+            
+            if (numero.value == "") {
+                mensagem.textContent = 'O campo número deve ser preenchido';
+                } else {
+                    mensagem.textContent = '';
+            }
+            
+            if (bairro.value == "") {
+                mensagem.textContent = 'O campo beirro deve ser preenchido';
+                } else {
+                    mensagem.textContent = '';
+            }
+            
+            if (cidade.value == "") {
+                mensagem.textContent = 'O campo cidade deve ser preenchido';
+                } else {
+                    mensagem.textContent = '';
+            }
+            
+            if (estado.value == "") {
+                mensagem.textContent = 'O campo estado deve ser preenchido';
+                } else {
+                    mensagem.textContent = '';
+            }
+            
+        }
+
         function ValidarFormulario()
         {
             var cep = document.getElementById('cep')
             if (cep.value == "") {
-                alert('Campo CEP deve ser preenchido')
                 cep.style.borderColor('red')
                 return false
+            } else {
+                cep.style.borderColor('none')
             }
 
             var endereco = document.getElementById ('endereco')
             if (endereco.value == "") {
                 alert('Campo Endereço deve ser preenchido')
-                cep.style.borderColor('red')
+                endereco.style.borderColor('red')
                 return false
             }
 
             var numero = document.getElementById('numero')
             if (numero.value == "") {
                 alert('Campo número deve ser preenchido')
-                cep.style.borderColor('red')
+                numero.style.borderColor('red')
                 return false
             }
 
             var bairro = document.getElementById ('bairro')
             if (bairro.value == "") {
                 alert('Campo bairro deve ser preenchido')
-                cep.style.borderColor('red')
+                bairro.style.borderColor('red')
                 return false
             }
 
             var cidade = document.getElementById('cidade')
             if (cidade.value == "") {
                 alert('Campo cidade deve ser preenchido')
-                cep.style.borderColor('red')
+                cidade.style.borderColor('red')
                 return false
             }
 
             var estado = document.getElementById ('estado')
             if (estado.value == "") {
-                cep.style.borderColor('red')
+                alert('Campo estado deve ser preenchido')
+                estado.style.borderColor('red')
                 return false
             }
         }
-
 
     </script>
 </body>
