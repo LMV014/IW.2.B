@@ -1,36 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Objryo</title>
+    <title>Exercício de Objetos</title>
 </head>
 <body>
+    <div id="resultado"></div>
+
     <script>
-
-        var cadeira = {
-            'cor' : 'preta',
-            'material' : 'courino',
-            'girar' : () => {
-                alert ('girouu')
-            },
-            'subir' : () => {
-                document.write('subindo')
-            },
-            'descer' : () => {
-                console.log('descendo')
-            },
-            'andar' : () => {
-                alert ('sentido: ' +direcacao)
-            }
-        }
-        cadeira.girar()
-        cadeira.descendo()
-        cadeira.andar('em frente')
-
         
+        var carro = {
+            marca: "Toyota",
+            modelo: "Corolla",
+            ano: 2023
+        };
+
+        document.write(`Modelo do primeiro carro: ${carro.modelo}<br>`);
+
+        carro.ano = 2024;
+
+        carro.cor = "vermelho";
+
+        var carro2 = {
+            marca: "Honda",
+            modelo: "Civic",
+            ano: 2023,
+            cor: "azul"
+        };
+
+        var carro3 = {
+            marca: "Volkswagen",
+            modelo: "Golf",
+            ano: 2023,
+            cor: "preto"
+        };
+
+        var resultado = document.getElementById('resultado');
+        resultado.innerText = `Cores dos carros:
+            Carro 1: ${carro.cor}
+            Carro 2: ${carro2.cor}
+            Carro 3: ${carro3.cor}`;
+
+        var pessoa = {
+            endereco: {
+                rua: "Rua das Flores",
+                numero: 123,
+                cidade: "São Paulo"
+            }
+        };
+
+        document.write(`<br>Cidade da pessoa: ${pessoa.endereco.cidade}`);
     </script>
 </body>
 </html>
