@@ -9,6 +9,7 @@
     <div id="resultado"></div>
 
     <script>
+<<<<<<< HEAD
         
         var carro = {
             marca: "Toyota",
@@ -51,6 +52,43 @@
         };
 
         document.write(`<br>Cidade da pessoa: ${pessoa.endereco.cidade}`);
+=======
+            // Cadeira
+        var cadeira = {
+            'cor' : 'preta',
+            'material' : 'courino',
+            'girar' : () => {
+                alert ('girouu')
+            },
+            'subir' : () => {
+                document.write('subindo')
+            },
+            'descer' : () => {
+                console.log('descendo')
+            },
+            'andar' : () => {
+                alert ('sentido: ' +direcacao)
+            }
+        }
+        cadeira.girar()
+        cadeira.descendo()
+        cadeira.andar('em frente')
+
+        //Endereço
+
+        var endereco = {
+            'cep' : '',
+            'Rua' : '',
+            'Número' : '',
+            'bairro' : '',
+            'cidade' : '',
+            'estado' : ''
+        }
+
+        enderecoEtec.Rua = 'Duque de caixias'
+        enderecoEtec.Número = '12-70'
+
+>>>>>>> 6479595054dcf7b3983dba76e2ac4822ebc2434d
     </script>
 </body>
 </html>
