@@ -20,6 +20,7 @@ body, html {
 }
 
 .top-bar {
+    border: 1px black solid;
     border-width: 5px;
     border-color: black;
     text-align: center;
