@@ -16,16 +16,48 @@ body, html {
     background-color: rgb(252, 248, 255);
     width: 350px;
     height: 600px;
-    border-radius: 20px;
+    border-radius: 45px;
+    border: 7px rgb(36, 36, 36) solid;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
 
+/* Header */
+
 .top-bar {
-    border: 1px black solid;
-    border-width: 5px;
-    border-color: black;
     text-align: center;
     height: 60px;
     font-size: 13px;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
+}
+
+h2, p {
+    margin-top: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+hr {
+    border: 1px solid rgb(36, 36, 36);
+    margin-top: 10px;
+}
+
+/* Professor */
+
+img {
+    height: 300px;
+    margin-top: 20%;
+    margin-left: 25%;
+}
+
+.professor-text {
+    text-align: center;
+}
+
+.professor-button {
+    margin-left: 35%;
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid rgb(36, 36, 36);
 }
